@@ -18,4 +18,8 @@
         <attr name="customLeftBackground" format="reference"/>
         <attr name="customRightBackground" format="reference"/>
     </declare-styleable>
+
+    <declare-styleable name="CircleImageView">
+
+    </declare-styleable>
 </resources>
