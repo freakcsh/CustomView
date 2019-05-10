@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomToolbar">
+        <attr name="customTitle" format="string" />
+        <attr name="customLeftTitle" format="string" />
+        <attr name="customRightTitle" format="string" />
+        <attr name="customTitleColor" format="color" />
+        <attr name="customLeftColor" format="color" />
+        <attr name="customRightColor" format="color" />
+        <attr name="customLeftTitlePaddingLeft" format="dimension"/>
+        <attr name="customLeftTitlePaddingRight" format="dimension"/>
+        <attr name="customLeftTitlePaddingBottom" format="dimension"/>
+        <attr name="customLeftTitlePaddingTop" format="dimension"/>
+        <attr name="customRightTitlePaddingLeft" format="dimension"/>
+        <attr name="customRightTitlePaddingRight" format="dimension"/>
+        <attr name="customRightTitlePaddingBottom" format="dimension"/>
+        <attr name="customRightTitlePaddingTop" format="dimension"/>
+        <attr name="customLeftBackground" format="reference"/>
+        <attr name="customRightBackground" format="reference"/>
+    </declare-styleable>
+</resources>

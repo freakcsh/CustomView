@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.freak.customview.MainActivity">
+
+    <com.freak.customview.custom.CustomToolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:customLeftBackground="@drawable/ic_arrow_back_black"
+        app:customLeftColor="#999999"
+        app:customLeftTitle="返回按钮"
+        app:customLeftTitlePaddingLeft="20dp"
+        app:customRightBackground="@drawable/ic_arrow_back_black"
+        app:customRightTitle="提交"
+        app:customRightTitlePaddingRight="20dp"
+        app:customTitle="测试标题"
+        app:customTitleColor="#000000" />
+
+</android.support.constraint.ConstraintLayout>
