@@ -7,19 +7,48 @@
         <attr name="customTitleColor" format="color" />
         <attr name="customLeftColor" format="color" />
         <attr name="customRightColor" format="color" />
-        <attr name="customLeftTitlePaddingLeft" format="dimension"/>
-        <attr name="customLeftTitlePaddingRight" format="dimension"/>
-        <attr name="customLeftTitlePaddingBottom" format="dimension"/>
-        <attr name="customLeftTitlePaddingTop" format="dimension"/>
-        <attr name="customRightTitlePaddingLeft" format="dimension"/>
-        <attr name="customRightTitlePaddingRight" format="dimension"/>
-        <attr name="customRightTitlePaddingBottom" format="dimension"/>
-        <attr name="customRightTitlePaddingTop" format="dimension"/>
-        <attr name="customLeftBackground" format="reference"/>
-        <attr name="customRightBackground" format="reference"/>
+        <attr name="customLeftTitlePaddingLeft" format="dimension" />
+        <attr name="customLeftTitlePaddingRight" format="dimension" />
+        <attr name="customLeftTitlePaddingBottom" format="dimension" />
+        <attr name="customLeftTitlePaddingTop" format="dimension" />
+        <attr name="customRightTitlePaddingLeft" format="dimension" />
+        <attr name="customRightTitlePaddingRight" format="dimension" />
+        <attr name="customRightTitlePaddingBottom" format="dimension" />
+        <attr name="customRightTitlePaddingTop" format="dimension" />
+        <attr name="customLeftBackground" format="reference" />
+        <attr name="customRightBackground" format="reference" />
     </declare-styleable>
 
     <declare-styleable name="CircleImageView">
 
+    </declare-styleable>
+    <declare-styleable name="CustomEditText">
+        <attr name="titleText" format="string|reference" />
+        <attr name="editTextHint" format="string|reference" />
+        <attr name="editTextText" format="string|reference" />
+
+    </declare-styleable>
+    <declare-styleable name="CustomSeekBar">
+        <attr name="mode">
+            <enum name="stroke" value="0" />
+            <enum name="fill" value="1" />
+            <enum name="fill_and_stroke" value="2" />
+        </attr>
+        <attr name="capRound" format="boolean" />
+        <attr name="showText" format="boolean" />
+        <attr name="startAngle" format="float" />
+        <attr name="textSize" format="dimension" />
+        <attr name="textColor" format="color" />
+        <attr name="progressWidth" format="dimension" />
+        <attr name="progressColor" format="color" />
+        <attr name="sProgressWidth" format="dimension" />
+        <attr name="sProgressColor" format="color" />
+        <attr name="progress" format="float" />
+        <attr name="maxProgress" format="float" />
+        <attr name="velocity" format="float" />
+        <attr name="fadeEnable" format="boolean" />
+        <attr name="startAlpha" format="integer" />
+        <attr name="endAlpha" format="integer" />
+        <attr name="zoomEnable" format="boolean" />
     </declare-styleable>
 </resources>

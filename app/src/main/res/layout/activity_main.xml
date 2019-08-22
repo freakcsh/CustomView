@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.freak.customview.MainActivity">
 
     <com.freak.customview.custom.CustomToolbar
@@ -17,6 +18,22 @@
         app:customRightTitle="提交"
         app:customRightTitlePaddingRight="20dp"
         app:customTitle="测试标题"
-        app:customTitleColor="#000000" />
+        app:customTitleColor="#000000"
+        tools:ignore="MissingConstraints" />
 
-</android.support.constraint.ConstraintLayout>
+    <com.freak.customview.custom.CustomEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints"
+        app:titleText="测试"
+        app:editTextHint="测试113"
+       />
+    <com.freak.customview.custom.CustomSeekBar
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        app:progressColor="#000000"
+        app:textSize="25sp"
+        app:sProgressColor="@color/colorPrimary"/>
+
+</LinearLayout>
