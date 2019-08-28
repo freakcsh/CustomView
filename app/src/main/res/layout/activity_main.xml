@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -24,16 +25,31 @@
     <com.freak.customview.custom.CustomEditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:ignore="MissingConstraints"
-        app:titleText="测试"
         app:editTextHint="测试113"
-       />
+        app:titleText="测试"
+        tools:ignore="MissingConstraints" />
+
     <com.freak.customview.custom.CustomSeekBar
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_gravity="center"
         app:progressColor="#000000"
-        app:textSize="25sp"
-        app:sProgressColor="@color/colorPrimary"/>
+        app:sProgressColor="@color/colorPrimary"
+        app:textSize="25sp" />
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="保存图片"
+        android:onClick="saveOnClick"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="查看图片"
+        android:onClick="lookOnClick"/>
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"/>
 </LinearLayout>

@@ -25,4 +25,12 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    //glide
+    implementation('com.github.bumptech.glide:glide:4.9.0') {
+        exclude group: 'com.android.support'
+    }
+    //权限申请
+    implementation 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.5@aar'
+    //网络请求
+    implementation 'com.github.freakcsh:HttpManage:V1.4'
 }

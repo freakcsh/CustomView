@@ -35,7 +35,11 @@ public class SDCardFileObserver extends FileObserver {
     private Map<String, DeleteFileTimerTask> tasks;
     private String targetDirName, targetFileName;
 
-
+    /**
+     * @param path
+     * @param fileName
+     * @param mask     指定要监听的事件类型，默认为FileObserver.ALL_EVENTS
+     */
     public SDCardFileObserver(String path, String fileName, int mask) {
         super(path, mask);
         mTimer = new Timer();
@@ -50,10 +54,15 @@ public class SDCardFileObserver extends FileObserver {
         switch (action) {
             case FileObserver.OPEN:
                 Log.d("FileObserver", "file open; path=" + path);
+                Log.e("TAG", "file open; path= " + path);
                 break;
             case FileObserver.CLOSE_NOWRITE:
             case FileObserver.CLOSE_WRITE:
                 Log.d("FileObserver", "file close; path=" + path);
+                Log.e("TAG", "file close; path= " + path);
+                if (path == null) {
+                    return;
+                }
                 if (!path.endsWith(targetFileName)) {
                     return;
                 }
@@ -61,13 +70,16 @@ public class SDCardFileObserver extends FileObserver {
                     DeleteFileTimerTask task = tasks.get(path);
                     if (task.cancel()) {
                         task = new DeleteFileTimerTask(path);
-                        mTimer.schedule(task, 30000);
+                        mTimer.schedule(task, 3000);
                     }
                 } else {
                     DeleteFileTimerTask task = new DeleteFileTimerTask(path);
                     tasks.put(path, task);
-                    mTimer.schedule(task, 30000);
+                    mTimer.schedule(task, 3000);
                 }
+                break;
+            case FileObserver.DELETE:
+                Log.e("TAG", "文件被删除");
                 break;
             default:
                 break;
@@ -88,6 +100,7 @@ public class SDCardFileObserver extends FileObserver {
             File f = new File(tmpFile);
             if (f.exists() && f.isFile()) {
                 Log.d("FileObserver", "delete tmp file " + path);
+                Log.e("TAG", "delete tmp file " + path);
                 f.delete();
                 SDCardFileObserver.this.stopWatching();
             }
